@@ -18,7 +18,9 @@ def create_app(config_filename):
     api.add_resource(TodoResource, '/todo', '/todo/', '/todo/<int:id>',
                      '/todo/<int:id>/')
     api.add_resource(ItemResource, '/todo/<int:todo_id>/item',
-                     '/todo/<int:todo_id>/item/<int:id>')
+                     '/todo/<int:todo_id>/item/',
+                     '/todo/<int:todo_id>/item/<int:id>',
+                     '/todo/<int:todo_id>/item/<int:id>/')
 
     return app
 
